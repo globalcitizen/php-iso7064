@@ -62,7 +62,7 @@ $p = ($p*$radix) % $modulus;
  $checksum = ($modulus - $p + 1) % $modulus;
  $second = $checksum % $radix;
  $first = ($checksum - $second) / $radix;
- return substr($output_values,$first,2);
+ return substr($output_values,$first,1) . substr($output_values,$second,1);
 }
 
 # ISO/IEC 7064, MOD 661-26
@@ -85,7 +85,7 @@ $p = ($p*$radix) % $modulus;
  $checksum = ($modulus - $p + 1) % $modulus;
  $second = $checksum % $radix;
  $first = ($checksum - $second) / $radix;
- return substr($output_values,$first,2);
+ return substr($output_values,$first,1) . substr($output_values,$second,1);
 }
 
 # ISO/IEC 7064, MOD 1271-36
@@ -108,7 +108,7 @@ $p = ($p*$radix) % $modulus;
  $checksum = ($modulus - $p + 1) % $modulus;
  $second = $checksum % $radix;
  $first = ($checksum - $second) / $radix;
- return substr($output_values,$first,2);
+ return substr($output_values,$first,1) . substr($output_values,$second,1);
 }
 
 ?>

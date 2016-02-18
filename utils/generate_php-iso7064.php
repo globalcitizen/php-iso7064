@@ -52,7 +52,7 @@ foreach(array_keys($__iso7064_algorithms) as $algorithm) {
  if($__iso7064_algorithms[$algorithm]['output_qty']>1) {   	
   print " \$second = \$checksum % \$radix;\n";
   print " \$first = (\$checksum - \$second) / \$radix;\n";
-  print " return substr(\$output_values,\$first,2);\n";
+  print " return substr(\$output_values,\$first,1) . substr(\$output_values,\$second,1);\n";
  }
  else {
   print " return substr(\$output_values,\$checksum,1);\n"; # later +1?

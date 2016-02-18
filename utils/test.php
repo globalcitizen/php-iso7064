@@ -30,7 +30,7 @@ $tests = array(
 foreach(array_keys($tests) as $algorithm) {
  print "[$algorithm]\n";
  foreach($tests[$algorithm] as $input=>$expected_output) {
-  print " - $algorithm('$input') = '$expected_output'? ... ";
+  print " - $algorithm('$input') ... ";
   $result = $algorithm($input);
   if($result != $expected_output) {
    print "FAILED (expected '$expected_output', received '$result').\n";
