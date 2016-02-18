@@ -14,12 +14,12 @@ function iso7064_mod11_2($input) {
  $output_values = '0123456789X';
  $p             = 0;
  for($i=0; $i<strlen($input); $i++) {
-  $val = $chars.indexOf($input.charAt($i));
+  $val = strpos($output_values,substr($input,$i,1));
   if($val < 0) { return ''; } # illegal character encountered
-  $p = (($p + $val) * $r) % $m;
+  $p = (($p + $val) * $radix) % $modulus;
  }
- $checksum = ($m - $p + 1) % $m;
- return $chars.charAt($checksum);
+ $checksum = ($modulus - $p + 1) % $modulus;
+ return substr($output_values,$checksum,1);
 }
 
 # ISO/IEC 7064, MOD 37-2
@@ -34,12 +34,12 @@ function iso7064_mod37_2($input) {
  $output_values = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ*';
  $p             = 0;
  for($i=0; $i<strlen($input); $i++) {
-  $val = $chars.indexOf($input.charAt($i));
+  $val = strpos($output_values,substr($input,$i,1));
   if($val < 0) { return ''; } # illegal character encountered
-  $p = (($p + $val) * $r) % $m;
+  $p = (($p + $val) * $radix) % $modulus;
  }
- $checksum = ($m - $p + 1) % $m;
- return $chars.charAt($checksum);
+ $checksum = ($modulus - $p + 1) % $modulus;
+ return substr($output_values,$checksum,1);
 }
 
 # ISO/IEC 7064, MOD 97-10
@@ -54,15 +54,15 @@ function iso7064_mod97_10($input) {
  $output_values = '0123456789';
  $p             = 0;
  for($i=0; $i<strlen($input); $i++) {
-  $val = $chars.indexOf($input.charAt($i));
+  $val = strpos($output_values,substr($input,$i,1));
   if($val < 0) { return ''; } # illegal character encountered
-  $p = (($p + $val) * $r) % $m;
+  $p = (($p + $val) * $radix) % $modulus;
  }
-$p = ($p*$r) % $m;
- $checksum = ($m - $p + 1) % $m;
- $second = $checksum % $r;
- $first = ($checksum - $second) / $r;
- return $chars.charAt($first) . chars.charAt($second);
+$p = ($p*$radix) % $modulus;
+ $checksum = ($modulus - $p + 1) % $modulus;
+ $second = $checksum % $radix;
+ $first = ($checksum - $second) / $radix;
+ return substr($output_values,$first,2);
 }
 
 # ISO/IEC 7064, MOD 661-26
@@ -77,15 +77,15 @@ function iso7064_mod661_26($input) {
  $output_values = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
  $p             = 0;
  for($i=0; $i<strlen($input); $i++) {
-  $val = $chars.indexOf($input.charAt($i));
+  $val = strpos($output_values,substr($input,$i,1));
   if($val < 0) { return ''; } # illegal character encountered
-  $p = (($p + $val) * $r) % $m;
+  $p = (($p + $val) * $radix) % $modulus;
  }
-$p = ($p*$r) % $m;
- $checksum = ($m - $p + 1) % $m;
- $second = $checksum % $r;
- $first = ($checksum - $second) / $r;
- return $chars.charAt($first) . chars.charAt($second);
+$p = ($p*$radix) % $modulus;
+ $checksum = ($modulus - $p + 1) % $modulus;
+ $second = $checksum % $radix;
+ $first = ($checksum - $second) / $radix;
+ return substr($output_values,$first,2);
 }
 
 # ISO/IEC 7064, MOD 1271-36
@@ -100,15 +100,15 @@ function iso7064_mod1271_36($input) {
  $output_values = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXZY';
  $p             = 0;
  for($i=0; $i<strlen($input); $i++) {
-  $val = $chars.indexOf($input.charAt($i));
+  $val = strpos($output_values,substr($input,$i,1));
   if($val < 0) { return ''; } # illegal character encountered
-  $p = (($p + $val) * $r) % $m;
+  $p = (($p + $val) * $radix) % $modulus;
  }
-$p = ($p*$r) % $m;
- $checksum = ($m - $p + 1) % $m;
- $second = $checksum % $r;
- $first = ($checksum - $second) / $r;
- return $chars.charAt($first) . chars.charAt($second);
+$p = ($p*$radix) % $modulus;
+ $checksum = ($modulus - $p + 1) % $modulus;
+ $second = $checksum % $radix;
+ $first = ($checksum - $second) / $radix;
+ return substr($output_values,$first,2);
 }
 
 ?>

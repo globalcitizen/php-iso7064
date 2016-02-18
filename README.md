@@ -3,6 +3,10 @@ php-iso7064
 
 This is a reference implementation of the various 'pure' ISO7064 algorithms in PHP. It is 100% generated code, from [algorithm metadata](https://github.com/globalcitizen/php-iso7064/blob/master/utils/algorithms.txt). Note that the 'hybrid' algorithms are not implemented.
 
+[![Build Status](https://travis-ci.org/globalcitizen/php-iso7064.png)](https://travis-ci.org/globalcitizen/php-iso7064)
+[![Latest Stable Version](https://poser.pugx.org/globalcitizen/php-iso7064/v/stable)](https://packagist.org/packages/globalcitizen/php-iso7064)
+[![License](https://poser.pugx.org/globalcitizen/php-iso7064/license)](https://packagist.org/packages/globalcitizen/php-iso7064)
+
 Algorithms implemented
 ----------------------
 
@@ -18,6 +22,7 @@ History
 -------
 
 __February 2016__
+* __[Version 0.1.2](https://github.com/globalcitizen/php-iban/releases/tag/v0.1.2) released__: On the way to functionality.
 * __[Version 0.1.1](https://github.com/globalcitizen/php-iban/releases/tag/v0.1.1) released__: Syntax error resolved.
 * __[Version 0.1.0](https://github.com/globalcitizen/php-iban/releases/tag/v0.1.0) released__: Absolutely and completely untested! :)
 

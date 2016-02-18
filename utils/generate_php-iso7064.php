@@ -41,21 +41,21 @@ foreach(array_keys($__iso7064_algorithms) as $algorithm) {
  print " \$output_values = '" . $__iso7064_algorithms[$algorithm]['output_values'] . "';\n";    # chars
  print " \$p             = 0;\n";
  print " for(\$i=0; \$i<strlen(\$input); \$i++) {\n";
- print "  \$val = \$chars.indexOf(\$input.charAt(\$i));\n";
+ print "  \$val = strpos(\$output_values,substr(\$input,\$i,1));\n"; # later +1?
  print "  if(\$val < 0) { return ''; } # illegal character encountered\n";
- print "  \$p = ((\$p + \$val) * \$r) % \$m;\n";
+ print "  \$p = ((\$p + \$val) * \$radix) % \$modulus;\n";
  print " }\n";
  if($__iso7064_algorithms[$algorithm]['output_qty']>1) {
-  print "\$p = (\$p*\$r) % \$m;\n";
+  print "\$p = (\$p*\$radix) % \$modulus;\n";
  }
- print " \$checksum = (\$m - \$p + 1) % \$m;\n";
+ print " \$checksum = (\$modulus - \$p + 1) % \$modulus;\n";
  if($__iso7064_algorithms[$algorithm]['output_qty']>1) {   	
-  print " \$second = \$checksum % \$r;\n";
-  print " \$first = (\$checksum - \$second) / \$r;\n";
-  print " return \$chars.charAt(\$first) . chars.charAt(\$second);\n";
+  print " \$second = \$checksum % \$radix;\n";
+  print " \$first = (\$checksum - \$second) / \$radix;\n";
+  print " return substr(\$output_values,\$first,2);\n";
  }
  else {
-  print " return \$chars.charAt(\$checksum);\n";
+  print " return substr(\$output_values,\$checksum,1);\n"; # later +1?
  }
  print "}\n\n";
 }
