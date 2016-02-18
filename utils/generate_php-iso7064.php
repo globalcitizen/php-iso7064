@@ -38,7 +38,7 @@ foreach(array_keys($__iso7064_algorithms) as $algorithm) {
  print " if(!preg_match('/^[" . $__iso7064_algorithms[$algorithm]['inputs'] . "]+$/',\$input)) { return ''; } # bad input\n";
  print " \$modulus       = " . $__iso7064_algorithms[$algorithm]['modulus'] . ";\n";          # m
  print " \$radix         = " . $__iso7064_algorithms[$algorithm]['radix'] . ";\n";            # r
- print " \$output_values = " . $__iso7064_algorithms[$algorithm]['output_values'] . ";\n";    # chars
+ print " \$output_values = '" . $__iso7064_algorithms[$algorithm]['output_values'] . "';\n";    # chars
  print " \$p             = 0;\n";
  print " for(\$i=0; \$i<strlen(\$input); \$i++) {\n";
  print "  \$val = \$chars.indexOf(\$input.charAt(\$i));\n";

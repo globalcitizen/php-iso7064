@@ -11,7 +11,7 @@ function iso7064_mod11_2($input) {
  if(!preg_match('/^[0123456789]+$/',$input)) { return ''; } # bad input
  $modulus       = 11;
  $radix         = 2;
- $output_values = 0123456789X;
+ $output_values = '0123456789X';
  $p             = 0;
  for($i=0; $i<strlen($input); $i++) {
   $val = $chars.indexOf($input.charAt($i));
@@ -31,7 +31,7 @@ function iso7064_mod37_2($input) {
  if(!preg_match('/^[0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ]+$/',$input)) { return ''; } # bad input
  $modulus       = 37;
  $radix         = 2;
- $output_values = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ*;
+ $output_values = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ*';
  $p             = 0;
  for($i=0; $i<strlen($input); $i++) {
   $val = $chars.indexOf($input.charAt($i));
@@ -51,7 +51,7 @@ function iso7064_mod97_10($input) {
  if(!preg_match('/^[0123456789]+$/',$input)) { return ''; } # bad input
  $modulus       = 97;
  $radix         = 10;
- $output_values = 0123456789;
+ $output_values = '0123456789';
  $p             = 0;
  for($i=0; $i<strlen($input); $i++) {
   $val = $chars.indexOf($input.charAt($i));
@@ -74,7 +74,7 @@ function iso7064_mod661_26($input) {
  if(!preg_match('/^[ABCDEFGHIJKLMNOPQRSTUVWXYZ]+$/',$input)) { return ''; } # bad input
  $modulus       = 661;
  $radix         = 26;
- $output_values = ABCDEFGHIJKLMNOPQRSTUVWXYZ;
+ $output_values = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
  $p             = 0;
  for($i=0; $i<strlen($input); $i++) {
   $val = $chars.indexOf($input.charAt($i));
@@ -97,7 +97,7 @@ function iso7064_mod1271_36($input) {
  if(!preg_match('/^[0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ]+$/',$input)) { return ''; } # bad input
  $modulus       = 1271;
  $radix         = 36;
- $output_values = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXZY;
+ $output_values = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXZY';
  $p             = 0;
  for($i=0; $i<strlen($input); $i++) {
   $val = $chars.indexOf($input.charAt($i));
