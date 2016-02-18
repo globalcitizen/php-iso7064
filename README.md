@@ -17,4 +17,8 @@ Algorithms implemented
 History
 -------
 
+__February 2016__
+* __[Version 0.1.0](https://github.com/globalcitizen/php-iban/releases/tag/v0.1.0) released__
+** Absolutely and completely untested! :)
+
 Inspiration was [@danieltwager](https://github.com/danieltwagner/)'s [ISO7064 Java Library](https://github.com/danieltwagner/iso7064/) and the pressing need to auto-detect checksum algorithms for [php-iban](https://github.com/globalcitizen/php-iban). Annoyingly, there didn't seem to be any way to define normal functions dynamically in PHP, so I had to settle for code generation instead of a reflective implementation.
