@@ -50,6 +50,5 @@ print "| --------- | ------------- | ----- | ------ |\n";
 foreach(array_keys($__iso7064_algorithms) as $algorithm) {
  print "| " . $__iso7064_algorithms[$algorithm]['title'] . " | `" . $algorithm . "()` | " . gimme_description($__iso7064_algorithms[$algorithm]['inputs']) . " | " . $__iso7064_algorithms[$algorithm]['output_qty'] . ' x ' . gimme_description($__iso7064_algorithms[$algorithm]['output_values']) . "|\n";
 }
-print "| --------- | ------------- | ----- | ------ |\n";
 
 ?>

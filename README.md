@@ -13,8 +13,6 @@ Algorithms implemented
 | ISO/IEC 7064, MOD 97-10 | `iso7064_mod97_10()` | Numeric | 2 x Numeric|
 | ISO/IEC 7064, MOD 661-26 | `iso7064_mod661_26()` | Alphabetic | 2 x Alphabetic|
 | ISO/IEC 7064, MOD 1271-36 | `iso7064_mod1271_36()` | Alphanumeric | 2 x Alphanumeric|
-| --------- | ------------- | ----- | ------ |
-
 
 History
 -------
