@@ -1,0 +1,9 @@
+{
+  "name": "globalcitizen/php-iso7064",
+  "description": "php-iban is a library implementing the pure ISO/IEC 7064 checksum functions.",
+  "license": "LGPL-3.0",
+  "autoload": {
+    "files": ["php-iso7064.php"]
+  }
+}
+
