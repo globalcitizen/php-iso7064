@@ -22,7 +22,7 @@ History
 -------
 
 __February 2016__
-* __[Version 1.0.0](https://github.com/globalcitizen/php-iban/releases/tag/v0.1.2) released__: First stable release passing tests.
+* __[Version 1.0.0](https://github.com/globalcitizen/php-iban/releases/tag/v1.0.0) released__: First stable release passing tests.
 * __[Version 0.1.2](https://github.com/globalcitizen/php-iban/releases/tag/v0.1.2) released__: On the way to functionality.
 * __[Version 0.1.1](https://github.com/globalcitizen/php-iban/releases/tag/v0.1.1) released__: Syntax error resolved.
 * __[Version 0.1.0](https://github.com/globalcitizen/php-iban/releases/tag/v0.1.0) released__: Absolutely and completely untested! :)
