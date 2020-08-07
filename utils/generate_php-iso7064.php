@@ -42,7 +42,7 @@ foreach(array_keys($__iso7064_algorithms) as $algorithm) {
  print " \$p             = 0;\n";
  print " for(\$i=0; \$i<strlen(\$input); \$i++) {\n";
  print "  \$val = strpos(\$output_values,substr(\$input,\$i,1));\n"; # later +1?
- print "  if(\$val < 0) { return ''; } # illegal character encountered\n";
+ print "  if(\$val === FALSE) { return ''; } # illegal character encountered\n";
  print "  \$p = ((\$p + \$val) * \$radix) % \$modulus;\n";
  print " }\n";
  if($__iso7064_algorithms[$algorithm]['output_qty']>1) {
