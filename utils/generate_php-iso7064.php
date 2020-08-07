@@ -46,7 +46,7 @@ foreach(array_keys($__iso7064_algorithms) as $algorithm) {
  print "  \$p = ((\$p + \$val) * \$radix) % \$modulus;\n";
  print " }\n";
  if($__iso7064_algorithms[$algorithm]['output_qty']>1) {
-  print "\$p = (\$p*\$radix) % \$modulus;\n";
+  print " \$p = (\$p*\$radix) % \$modulus;\n";
  }
  print " \$checksum = (\$modulus - \$p + 1) % \$modulus;\n";
  if($__iso7064_algorithms[$algorithm]['output_qty']>1) {   	
