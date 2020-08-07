@@ -6,7 +6,7 @@ function __iso7064_load_algorithms() {
  global $__iso7064_algorithms;
  $algorithms_definition = dirname(__FILE__) . "/algorithms.txt";
  $data = file_get_contents($algorithms_definition);
- $lines = split("\n",$data);
+ $lines = explode("\n",$data);
  array_shift($lines); # drop header
  foreach($lines as $line) {
   if($line!='') {
