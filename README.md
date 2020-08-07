@@ -21,6 +21,8 @@ Algorithms implemented
 History
 -------
 
+__August 2020__
+* __[Version 1.0.1](https://github.com/globalcitizen/php-iban/releases/tag/v1.0.1) released__: Various edge case fixes by [neo954](https://github.com/neo954). Thanks!
 __February 2016__
 * __[Version 1.0.0](https://github.com/globalcitizen/php-iban/releases/tag/v1.0.0) released__: First stable release passing tests.
 * __[Version 0.1.2](https://github.com/globalcitizen/php-iban/releases/tag/v0.1.2) released__: On the way to functionality.
